@@ -54,7 +54,7 @@ function calcularIMC() {
         Utilize a calculadora abaixo para fazer o seu cálculo:
       </p>
       <div class="inputIMC">
-        <label class="textIMC" for="altura"
+        <label class="labelIMC" for="altura"
           >Infome sua altura (metro . cm)</label
         >
         <input
@@ -66,7 +66,7 @@ function calcularIMC() {
         />
       </div>
       <div class="inputIMC">
-        <label class="textIMC" for="peso">Informe seu peso (kg)</label>
+        <label class="labelIMC" for="peso">Informe seu peso (kg)</label>
         <input
           class="input"
           type="number"
@@ -129,6 +129,7 @@ function calcularIMC() {
   margin: 10px 0;
   color: green;
   font-weight: bold;
+  text-align: center;
 }
 .card {
   background-color: #777;
@@ -157,6 +158,7 @@ function calcularIMC() {
   margin-top: 20px;
   padding: 20px;
   color: green;
+  text-align: center;
 }
 .inputIMC {
   display: flex;
@@ -164,7 +166,7 @@ function calcularIMC() {
   align-items: center;
   margin: 5px;
 }
-.textIMC {
+.labelIMC {
   font-size: 16px;
   color: green;
   font-weight: bold;
@@ -204,5 +206,39 @@ function calcularIMC() {
 }
 .btn:active {
   transform: scale(0.9);
+}
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+  }
+  .sobreIMC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0 ;
+  padding: 0;
+  font-size: 16px;
+}
+.card {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#res {
+  font-size: 25px;
+  margin-top: 10px;
+  padding: 10px;
+}
 }
 </style>
