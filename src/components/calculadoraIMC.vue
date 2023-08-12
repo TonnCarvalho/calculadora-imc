@@ -11,15 +11,15 @@ function calcularIMC() {
   const resultado = peso.value / (altura.value * altura.value);
   res.innerHTML = `Seu IMC atual é de  ${resultado.toFixed(2)}`;
 
-  if(altura.value <= 0 && peso.value <= 0) {
-    altura.style = " border: 2px solid #be201c;"
-    peso.style = "border: 2px solid #be201c;"
-    res.style = "color: #be201c"
-    res.innerHTML = `Informe sua altura e seu peso primeiro.`
+  if (altura.value <= 0 && peso.value <= 0) {
+    altura.style = " border: 2px solid #be201c;";
+    peso.style = "border: 2px solid #be201c;";
+    res.style = "color: #be201c";
+    res.innerHTML = `Informe sua altura e seu peso primeiro.`;
   } else {
-    altura.style = ""
-    peso.style = ""
-    res.style = ""
+    altura.style = "";
+    peso.style = "";
+    res.style = "";
   }
 
   function colorTable() {
@@ -35,7 +35,6 @@ function calcularIMC() {
     } else if (resultado <= 40) {
       obsidade.classList.add("red");
     } else {
-
     }
   }
   colorTable();
@@ -48,15 +47,16 @@ function calcularIMC() {
       <p class="sobreIMC">
         O IMC é reconhecido como padrão internacional para avaliar o grau de
         sobrepeso e obesidade. É calculado dividindo o peso (em kg) pela altura
-        ao quadrado (em metros). 
+        ao quadrado (em metros).
         <span>IMC = Peso ÷ (Altura x Altura)</span>
         Exemplo de como calcular o IMC:
-        <span>IMC = 80 kg ÷ (1,80 m x 1,80 m) = 24,69 kg/m2 (Peso
-        ideal)</span> 
+        <span>IMC = 80 kg ÷ (1,80 m x 1,80 m) = 24,69 kg/m2 (Peso ideal)</span>
         Utilize a calculadora abaixo para fazer o seu cálculo:
       </p>
       <div class="inputIMC">
-        <label class="textIMC" for="altura">Infome sua altura (metro . cm)</label>
+        <label class="textIMC" for="altura"
+          >Infome sua altura (metro . cm)</label
+        >
         <input
           class="input"
           type="number"
@@ -116,7 +116,7 @@ function calcularIMC() {
   align-items: center;
   flex-direction: column;
 }
-.sobreIMC{
+.sobreIMC {
   display: flex;
   flex-direction: column;
   align-items: center;
